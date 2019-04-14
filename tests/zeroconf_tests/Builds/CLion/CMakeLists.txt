@@ -19,7 +19,7 @@ add_executable (CONSOLEAPP
     "../../Source/ZeroConfTests.h"
     "../../Source/ZeroConfTests.cpp"
     "../../Source/Main.cpp"
-    "../../../../modules/diaupro_zeroconf/diaupro_zeroconf.h"
+    "../../../../modules/diaupro_monitor/diaupro_monitor.h"
     "../../../../../JUCE/modules/juce_core/containers/juce_AbstractFifo.cpp"
     "../../../../../JUCE/modules/juce_core/containers/juce_AbstractFifo.h"
     "../../../../../JUCE/modules/juce_core/containers/juce_Array.h"
@@ -338,7 +338,7 @@ add_executable (CONSOLEAPP
 )
 
 set_source_files_properties ("../../Source/ZeroConfTests.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../modules/diaupro_zeroconf/diaupro_zeroconf.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties ("../../../../modules/diaupro_monitor/diaupro_monitor.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/containers/juce_AbstractFifo.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/containers/juce_AbstractFifo.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/containers/juce_Array.h" PROPERTIES HEADER_FILE_ONLY TRUE)

@@ -7,10 +7,10 @@
   ID:               diaupro_zeroconf
   vendor:           
   version:          1.0.0
-  name:             ZeroConf Networking
+  name:             ZeroConf Networking | ZeroConf Module
   description:      Part of a module that allows distributed audio processing
-  website:          
+  website:          https://github.com/alexgustafson/Diaupro
   license:          MIT
-  dependencies:     
+  dependencies:     diaupro_monitor
  END_JUCE_MODULE_DECLARATION
 *******************************************************************************/

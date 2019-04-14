@@ -14,7 +14,7 @@
 
 #include "AppConfig.h"
 
-#include <diaupro_zeroconf/diaupro_zeroconf.h>
+#include <diaupro_monitor/diaupro_monitor.h>
 #include <juce_core/juce_core.h>
 #include <juce_data_structures/juce_data_structures.h>
 #include <juce_events/juce_events.h>

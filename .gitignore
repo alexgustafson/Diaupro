@@ -241,3 +241,4 @@ Temporary Items
 .apdisk
 */.idea/
 /tests/zeroconf_tests/Builds/MacOSX/.idea/
+/tests/monitor_tests/Builds/MacOSX/.idea/
