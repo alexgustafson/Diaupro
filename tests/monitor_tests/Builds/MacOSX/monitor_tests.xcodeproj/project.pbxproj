@@ -29,6 +29,10 @@
 			isa = PBXBuildFile;
 			fileRef = 7E121975A5C6574791D2797A;
 		};
+		7C1532ED4EBD5FD34E5DA7AE = {
+			isa = PBXBuildFile;
+			fileRef = B19974D9EDF41CB9A20BBC56;
+		};
 		D48766A9F18E7BA31132E7BF = {
 			isa = PBXBuildFile;
 			fileRef = D642D2451108A7BBAFED6621;
@@ -87,6 +91,13 @@
 			lastKnownFileType = file;
 			name = "diaupro_monitor";
 			path = "../../../../modules/diaupro_monitor";
+			sourceTree = "SOURCE_ROOT";
+		};
+		B19974D9EDF41CB9A20BBC56 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_diaupro_monitor.cpp";
+			path = "../../JuceLibraryCode/include_diaupro_monitor.cpp";
 			sourceTree = "SOURCE_ROOT";
 		};
 		C270F186816B951CDBC3817A = {
@@ -148,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				9CDD9D529829D85481E44417,
+				B19974D9EDF41CB9A20BBC56,
 				D642D2451108A7BBAFED6621,
 				72E2933683CC6B5CB7413F4C,
 			);
@@ -402,6 +414,7 @@
 			files = (
 				D2A6D168EDCDC7ED3504C001,
 				5B70C8142B8398AE895C57C2,
+				7C1532ED4EBD5FD34E5DA7AE,
 				D48766A9F18E7BA31132E7BF,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

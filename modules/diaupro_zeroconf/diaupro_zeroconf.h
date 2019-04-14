@@ -14,3 +14,6 @@
   dependencies:     diaupro_monitor
  END_JUCE_MODULE_DECLARATION
 *******************************************************************************/
+
+#pragma once
+#define DIAUPRO_ZEROCONF_H_INCLUDED
