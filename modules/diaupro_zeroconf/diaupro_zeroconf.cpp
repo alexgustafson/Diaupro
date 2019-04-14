@@ -7,3 +7,9 @@
 
   ==============================================================================
 */
+
+
+
+#include "diaupro_zeroconf.h"
+
+#include "ZeroConf/ZeroConfManager.cpp"

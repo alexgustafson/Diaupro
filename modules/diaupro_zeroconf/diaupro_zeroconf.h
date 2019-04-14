@@ -29,6 +29,8 @@
 
 #include <dns_sd.h>
 
+#include <juce_core/juce_core.h>
+
 
 using namespace juce;
-#include "ZeroConf/ZeroConf.h"
+#include "ZeroConf/ZeroConfManager.h"

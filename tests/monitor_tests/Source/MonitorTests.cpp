@@ -11,17 +11,14 @@
 #include "MonitorTests.h"
 
 
-void MonitorTests::firstTest()
-{
+void MonitorTests::firstTest() {
     beginTest("Testing The Tester");
     expect(true);
     expectEquals(1, 1);
 }
 
 
-
-void MonitorTests::startUpAndShutDownTest()
-{
+void MonitorTests::startUpAndShutDownTest() {
     beginTest("Start Up and Shut Down Test");
 
     Monitor monitor;
@@ -35,8 +32,8 @@ void MonitorTests::startUpAndShutDownTest()
 
 }
 
-void MonitorTests::callBackTest()
-{
+
+void MonitorTests::callBackTest() {
 
     beginTest("CallBack Test");
 
@@ -48,53 +45,45 @@ void MonitorTests::callBackTest()
 
     pool->addJob(listener, false);
 
-    while(pool->getNumJobs() > 0 )
-    {
+    while (pool->getNumJobs() > 0) {
         Thread::sleep(5);
     }
 
     monitor.stop();
     expect(true == listener->was_informed);
-
-
 }
 
-void MonitorTests::multiThreadedCallBackTest()
-{
+
+void MonitorTests::multiThreadedCallBackTest() {
     beginTest("Concurrent CallBack Test");
 
     Monitor monitor;
     monitor.startMonitoring();
 
-
     OwnedArray<SocketListener> listeners;
 
-    for (int i = 0; i < 50 ; i++) {
-        SocketListener* listener = new SocketListener();
-        listener->initializeSockets((40780 + (5*i)), &monitor, String("quassel") + String(i*20));
+    for (int i = 0; i < 50; i++) {
+        SocketListener *listener = new SocketListener();
+        listener->initializeSockets((40780 + (5 * i)), &monitor, String("quassel") + String(i * 20));
         listeners.add(listener);
     }
 
-    for (int i = 0; i < 50 ; i++) {
+    for (int i = 0; i < 50; i++) {
         pool->addJob(listeners[i], false);
     }
 
-    while(pool->getNumJobs() > 0 )
-    {
+    while (pool->getNumJobs() > 0) {
         Thread::sleep(20);
     }
 
     monitor.stop();
-    for (int i = 0; i < 50 ; i++) {
-
+    for (int i = 0; i < 50; i++) {
         expect(listeners[i]->was_informed == true);
-
     }
 
 }
 
-void MonitorTests::runTest()
-{
+void MonitorTests::runTest() {
     firstTest();
     startUpAndShutDownTest();
     callBackTest();

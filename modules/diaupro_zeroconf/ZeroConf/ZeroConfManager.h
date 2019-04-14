@@ -10,6 +10,16 @@
 
 #pragma once
 
+#include <dns_sd.h>
+#include <sys/types.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <juce_core/juce_core.h>
+#include "diaupro_monitor/diaupro_monitor.h"
 
 class ZeroConfService {
 public:

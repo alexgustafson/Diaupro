@@ -10,8 +10,7 @@
 
 #pragma once
 
-#include <diaupro_zeroconf/ZeroConf/ZeroConfManager.h>
-#include "JuceHeader.h"
+#include "../JuceLibraryCode/JuceHeader.h"
 
 
 class ZeroConfTests : public UnitTest {

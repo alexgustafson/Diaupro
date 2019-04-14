@@ -27,16 +27,20 @@
 
 
 #pragma once
+#define DIAUPRO_MONITOR_H_INCLUDED
 
-#include <juce_core/juce_core.h>
+
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/select.h>
 
+#include <juce_core/juce_core.h>
+
 
 using namespace juce;
+
 #include "Monitor/Monitor.h"
 
 

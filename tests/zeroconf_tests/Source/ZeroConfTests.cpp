@@ -13,9 +13,6 @@
 
 void ZeroConfTests::firstTest() {
 
-    juce::Value value;
-    value.setValue(true);
-
     beginTest("Testing the Tester");
     expect(true, "Testing Setup Failed");
     expectNotEquals(1, 2, "Testing Setup Failed");
