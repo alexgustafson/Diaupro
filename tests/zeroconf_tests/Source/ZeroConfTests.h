@@ -15,13 +15,12 @@
 
 class ZeroConfTests : public UnitTest {
 public:
-    ZeroConfTests() : UnitTest("") {
+    ZeroConfTests() : UnitTest("Diaupro ZeroConf Tests") {
     }
 
     void firstTest();
-
     void browseTest();
-
+    void registerTest();
     void runTest();
 
 private:
