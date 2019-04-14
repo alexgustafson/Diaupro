@@ -20,6 +20,8 @@ public:
 
     void firstTest();
     void startUpAndShutDownTest();
+    void callBackTest();
+    void multiThreadedCallBackTest();
     void runTest();
 
 private:

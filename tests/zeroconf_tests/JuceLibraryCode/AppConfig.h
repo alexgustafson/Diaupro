@@ -48,10 +48,9 @@
 #define JUCE_USE_DARK_SPLASH_SCREEN 1
 
 //==============================================================================
-#define JUCE_MODULE_AVAILABLE_diaupro_monitor           1
-#define JUCE_MODULE_AVAILABLE_juce_core                 1
-#define JUCE_MODULE_AVAILABLE_juce_data_structures      1
-#define JUCE_MODULE_AVAILABLE_juce_events               1
+#define JUCE_MODULE_AVAILABLE_diaupro_monitor       1
+#define JUCE_MODULE_AVAILABLE_diaupro_zeroconf      1
+#define JUCE_MODULE_AVAILABLE_juce_core             1
 
 #define JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED 1
 
@@ -96,13 +95,6 @@
 
 #ifndef    JUCE_STRICT_REFCOUNTEDPOINTER
  #define   JUCE_STRICT_REFCOUNTEDPOINTER 1
-#endif
-
-//==============================================================================
-// juce_events flags:
-
-#ifndef    JUCE_EXECUTE_APP_SUSPEND_ON_IOS_BACKGROUND_TASK
- //#define JUCE_EXECUTE_APP_SUSPEND_ON_IOS_BACKGROUND_TASK 0
 #endif
 
 //==============================================================================

@@ -15,9 +15,8 @@
 #include "AppConfig.h"
 
 #include <diaupro_monitor/diaupro_monitor.h>
+#include <diaupro_zeroconf/diaupro_zeroconf.h>
 #include <juce_core/juce_core.h>
-#include <juce_data_structures/juce_data_structures.h>
-#include <juce_events/juce_events.h>
 
 
 #if ! DONT_SET_USING_JUCE_NAMESPACE

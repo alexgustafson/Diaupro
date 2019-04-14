@@ -27,8 +27,6 @@
 
 
 #pragma once
-#define DIAUPRO_MONITOR_H_INCLUDED
-
 
 #include <juce_core/juce_core.h>
 #include <netinet/in.h>
@@ -36,7 +34,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/select.h>
-
 
 
 using namespace juce;

@@ -1,3 +1,13 @@
+/*
+  ==============================================================================
+
+    diaupro_zeroconf.h
+    Created: 14 Apr 2019
+    Author:  Alex Gustafson
+
+  ==============================================================================
+*/
+
 /*******************************************************************************
  The block below describes the properties of this module, and is read by
  the Projucer to automatically generate project code that uses it.
@@ -16,4 +26,9 @@
 *******************************************************************************/
 
 #pragma once
-#define DIAUPRO_ZEROCONF_H_INCLUDED
+
+#include <dns_sd.h>
+
+
+using namespace juce;
+#include "ZeroConf/ZeroConf.h"

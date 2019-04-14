@@ -19,7 +19,14 @@ add_executable (CONSOLEAPP
     "../../Source/ZeroConfTests.h"
     "../../Source/ZeroConfTests.cpp"
     "../../Source/Main.cpp"
+    "../../../../modules/diaupro_monitor/Monitor/Monitor.cpp"
+    "../../../../modules/diaupro_monitor/Monitor/Monitor.h"
+    "../../../../modules/diaupro_monitor/diaupro_monitor.cpp"
     "../../../../modules/diaupro_monitor/diaupro_monitor.h"
+    "../../../../modules/diaupro_zeroconf/ZeroConf/ZeroConfManager.cpp"
+    "../../../../modules/diaupro_zeroconf/ZeroConf/ZeroConfManager.h"
+    "../../../../modules/diaupro_zeroconf/diaupro_zeroconf.cpp"
+    "../../../../modules/diaupro_zeroconf/diaupro_zeroconf.h"
     "../../../../../JUCE/modules/juce_core/containers/juce_AbstractFifo.cpp"
     "../../../../../JUCE/modules/juce_core/containers/juce_AbstractFifo.h"
     "../../../../../JUCE/modules/juce_core/containers/juce_Array.h"
@@ -264,81 +271,22 @@ add_executable (CONSOLEAPP
     "../../../../../JUCE/modules/juce_core/juce_core.cpp"
     "../../../../../JUCE/modules/juce_core/juce_core.mm"
     "../../../../../JUCE/modules/juce_core/juce_core.h"
-    "../../../../../JUCE/modules/juce_data_structures/app_properties/juce_ApplicationProperties.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/app_properties/juce_ApplicationProperties.h"
-    "../../../../../JUCE/modules/juce_data_structures/app_properties/juce_PropertiesFile.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/app_properties/juce_PropertiesFile.h"
-    "../../../../../JUCE/modules/juce_data_structures/undomanager/juce_UndoableAction.h"
-    "../../../../../JUCE/modules/juce_data_structures/undomanager/juce_UndoManager.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/undomanager/juce_UndoManager.h"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_CachedValue.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_CachedValue.h"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_Value.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_Value.h"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_ValueTree.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_ValueTree.h"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_ValueTreeSynchroniser.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_ValueTreeSynchroniser.h"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_ValueWithDefault.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/values/juce_ValueWithDefault.h"
-    "../../../../../JUCE/modules/juce_data_structures/juce_data_structures.cpp"
-    "../../../../../JUCE/modules/juce_data_structures/juce_data_structures.mm"
-    "../../../../../JUCE/modules/juce_data_structures/juce_data_structures.h"
-    "../../../../../JUCE/modules/juce_events/broadcasters/juce_ActionBroadcaster.cpp"
-    "../../../../../JUCE/modules/juce_events/broadcasters/juce_ActionBroadcaster.h"
-    "../../../../../JUCE/modules/juce_events/broadcasters/juce_ActionListener.h"
-    "../../../../../JUCE/modules/juce_events/broadcasters/juce_AsyncUpdater.cpp"
-    "../../../../../JUCE/modules/juce_events/broadcasters/juce_AsyncUpdater.h"
-    "../../../../../JUCE/modules/juce_events/broadcasters/juce_ChangeBroadcaster.cpp"
-    "../../../../../JUCE/modules/juce_events/broadcasters/juce_ChangeBroadcaster.h"
-    "../../../../../JUCE/modules/juce_events/broadcasters/juce_ChangeListener.h"
-    "../../../../../JUCE/modules/juce_events/interprocess/juce_ConnectedChildProcess.cpp"
-    "../../../../../JUCE/modules/juce_events/interprocess/juce_ConnectedChildProcess.h"
-    "../../../../../JUCE/modules/juce_events/interprocess/juce_InterprocessConnection.cpp"
-    "../../../../../JUCE/modules/juce_events/interprocess/juce_InterprocessConnection.h"
-    "../../../../../JUCE/modules/juce_events/interprocess/juce_InterprocessConnectionServer.cpp"
-    "../../../../../JUCE/modules/juce_events/interprocess/juce_InterprocessConnectionServer.h"
-    "../../../../../JUCE/modules/juce_events/interprocess/juce_NetworkServiceDiscovery.cpp"
-    "../../../../../JUCE/modules/juce_events/interprocess/juce_NetworkServiceDiscovery.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_ApplicationBase.cpp"
-    "../../../../../JUCE/modules/juce_events/messages/juce_ApplicationBase.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_CallbackMessage.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_DeletedAtShutdown.cpp"
-    "../../../../../JUCE/modules/juce_events/messages/juce_DeletedAtShutdown.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_Initialisation.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_Message.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_MessageListener.cpp"
-    "../../../../../JUCE/modules/juce_events/messages/juce_MessageListener.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_MessageManager.cpp"
-    "../../../../../JUCE/modules/juce_events/messages/juce_MessageManager.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_MountedVolumeListChangeDetector.h"
-    "../../../../../JUCE/modules/juce_events/messages/juce_NotificationType.h"
-    "../../../../../JUCE/modules/juce_events/native/juce_android_Messaging.cpp"
-    "../../../../../JUCE/modules/juce_events/native/juce_ios_MessageManager.mm"
-    "../../../../../JUCE/modules/juce_events/native/juce_linux_EventLoop.h"
-    "../../../../../JUCE/modules/juce_events/native/juce_linux_Messaging.cpp"
-    "../../../../../JUCE/modules/juce_events/native/juce_mac_MessageManager.mm"
-    "../../../../../JUCE/modules/juce_events/native/juce_osx_MessageQueue.h"
-    "../../../../../JUCE/modules/juce_events/native/juce_win32_HiddenMessageWindow.h"
-    "../../../../../JUCE/modules/juce_events/native/juce_win32_Messaging.cpp"
-    "../../../../../JUCE/modules/juce_events/native/juce_win32_WinRTWrapper.cpp"
-    "../../../../../JUCE/modules/juce_events/native/juce_win32_WinRTWrapper.h"
-    "../../../../../JUCE/modules/juce_events/timers/juce_MultiTimer.cpp"
-    "../../../../../JUCE/modules/juce_events/timers/juce_MultiTimer.h"
-    "../../../../../JUCE/modules/juce_events/timers/juce_Timer.cpp"
-    "../../../../../JUCE/modules/juce_events/timers/juce_Timer.h"
-    "../../../../../JUCE/modules/juce_events/juce_events.cpp"
-    "../../../../../JUCE/modules/juce_events/juce_events.mm"
-    "../../../../../JUCE/modules/juce_events/juce_events.h"
     "../../JuceLibraryCode/AppConfig.h"
+    "../../JuceLibraryCode/include_diaupro_monitor.cpp"
+    "../../JuceLibraryCode/include_diaupro_zeroconf.cpp"
     "../../JuceLibraryCode/include_juce_core.mm"
-    "../../JuceLibraryCode/include_juce_data_structures.mm"
-    "../../JuceLibraryCode/include_juce_events.mm"
     "../../JuceLibraryCode/JuceHeader.h"
 )
 
 set_source_files_properties ("../../Source/ZeroConfTests.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties ("../../../../modules/diaupro_monitor/Monitor/Monitor.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties ("../../../../modules/diaupro_monitor/Monitor/Monitor.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties ("../../../../modules/diaupro_monitor/diaupro_monitor.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../modules/diaupro_monitor/diaupro_monitor.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties ("../../../../modules/diaupro_zeroconf/ZeroConf/ZeroConfManager.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties ("../../../../modules/diaupro_zeroconf/ZeroConf/ZeroConfManager.h" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties ("../../../../modules/diaupro_zeroconf/diaupro_zeroconf.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
+set_source_files_properties ("../../../../modules/diaupro_zeroconf/diaupro_zeroconf.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/containers/juce_AbstractFifo.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/containers/juce_AbstractFifo.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/containers/juce_Array.h" PROPERTIES HEADER_FILE_ONLY TRUE)
@@ -583,72 +531,6 @@ set_source_files_properties ("../../../../../JUCE/modules/juce_core/zip/juce_Zip
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/juce_core.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/juce_core.mm" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../../../../JUCE/modules/juce_core/juce_core.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/app_properties/juce_ApplicationProperties.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/app_properties/juce_ApplicationProperties.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/app_properties/juce_PropertiesFile.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/app_properties/juce_PropertiesFile.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/undomanager/juce_UndoableAction.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/undomanager/juce_UndoManager.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/undomanager/juce_UndoManager.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_CachedValue.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_CachedValue.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_Value.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_Value.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_ValueTree.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_ValueTree.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_ValueTreeSynchroniser.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_ValueTreeSynchroniser.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_ValueWithDefault.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/values/juce_ValueWithDefault.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/juce_data_structures.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/juce_data_structures.mm" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_data_structures/juce_data_structures.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/broadcasters/juce_ActionBroadcaster.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/broadcasters/juce_ActionBroadcaster.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/broadcasters/juce_ActionListener.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/broadcasters/juce_AsyncUpdater.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/broadcasters/juce_AsyncUpdater.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/broadcasters/juce_ChangeBroadcaster.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/broadcasters/juce_ChangeBroadcaster.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/broadcasters/juce_ChangeListener.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/interprocess/juce_ConnectedChildProcess.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/interprocess/juce_ConnectedChildProcess.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/interprocess/juce_InterprocessConnection.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/interprocess/juce_InterprocessConnection.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/interprocess/juce_InterprocessConnectionServer.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/interprocess/juce_InterprocessConnectionServer.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/interprocess/juce_NetworkServiceDiscovery.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/interprocess/juce_NetworkServiceDiscovery.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_ApplicationBase.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_ApplicationBase.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_CallbackMessage.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_DeletedAtShutdown.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_DeletedAtShutdown.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_Initialisation.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_Message.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_MessageListener.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_MessageListener.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_MessageManager.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_MessageManager.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_MountedVolumeListChangeDetector.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/messages/juce_NotificationType.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_android_Messaging.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_ios_MessageManager.mm" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_linux_EventLoop.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_linux_Messaging.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_mac_MessageManager.mm" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_osx_MessageQueue.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_win32_HiddenMessageWindow.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_win32_Messaging.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_win32_WinRTWrapper.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/native/juce_win32_WinRTWrapper.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/timers/juce_MultiTimer.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/timers/juce_MultiTimer.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/timers/juce_Timer.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/timers/juce_Timer.h" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/juce_events.cpp" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/juce_events.mm" PROPERTIES HEADER_FILE_ONLY TRUE)
-set_source_files_properties ("../../../../../JUCE/modules/juce_events/juce_events.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../JuceLibraryCode/AppConfig.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 set_source_files_properties ("../../JuceLibraryCode/JuceHeader.h" PROPERTIES HEADER_FILE_ONLY TRUE)
 
@@ -663,7 +545,7 @@ execute_process (COMMAND uname -m OUTPUT_VARIABLE JUCE_ARCH_LABEL OUTPUT_STRIP_T
 target_include_directories (CONSOLEAPP PRIVATE
     "../../JuceLibraryCode"
     "../../../../modules"
-    "/Users/alex/Dev/JUCE/modules"
+    "../../../../../JUCE/modules"
 )
 
 target_compile_definitions (CONSOLEAPP PRIVATE
@@ -728,7 +610,7 @@ execute_process (COMMAND uname -m OUTPUT_VARIABLE JUCE_ARCH_LABEL OUTPUT_STRIP_T
 target_include_directories (CONSOLEAPP PRIVATE
     "../../JuceLibraryCode"
     "../../../../modules"
-    "/Users/alex/Dev/JUCE/modules"
+    "../../../../../JUCE/modules"
 )
 
 target_compile_definitions (CONSOLEAPP PRIVATE

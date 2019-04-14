@@ -16,26 +16,23 @@
         <CONFIGURATION isDebug="0" name="Release"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../../Dev/JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../Dev/JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="../../Dev/JUCE/modules"/>
+        <MODULEPATH id="diaupro_zeroconf" path="../../modules"/>
         <MODULEPATH id="diaupro_monitor" path="../../modules"/>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
     <CLION targetFolder="Builds/CLion">
       <MODULEPATHS>
-        <MODULEPATH id="juce_core" path="../../Dev/JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="../../Dev/JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="../../Dev/JUCE/modules"/>
+        <MODULEPATH id="diaupro_zeroconf" path="../../modules"/>
         <MODULEPATH id="diaupro_monitor" path="../../modules"/>
+        <MODULEPATH id="juce_core" path="../../../JUCE/modules"/>
       </MODULEPATHS>
     </CLION>
   </EXPORTFORMATS>
   <MODULES>
     <MODULE id="diaupro_monitor" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
-    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="diaupro_zeroconf" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
   </MODULES>
   <LIVE_SETTINGS>
     <OSX/>
